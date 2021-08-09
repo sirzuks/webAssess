@@ -17,11 +17,12 @@ Create test cases for web link : [Way2Automation](http://www.way2automation.com/
 
 
 ## Technologies Used
-1. For this test case I created a UnitTest .NetFrameWork 4.7.2 Project 
-2. Installed Selenium webdriver package for solution 
-3. Installed NUnitFramework
-4. Installed nunitTestAdapter.WithFramework
-5. Installed chrome drive using Nuget Packages
+a. This Project was created in Visual studio Community - Best experienced cloned in Visual Studio (Can use other editors as well)
+  1. For this test case I created a UnitTest .NetFrameWork 4.7.2 Project 
+  2. Installed Selenium webdriver package for solution 
+  3. Installed NUnitFramework
+  4. Installed nunitTestAdapter.WithFramework
+  5. Installed chrome drive using Nuget Packages
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
