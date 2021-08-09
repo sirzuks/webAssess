@@ -1,7 +1,23 @@
-# Task 2 - Web Automation
-
 Author: Zukile Ngcizela 
 Date: 09 August 2021<br />
+
+# Task 1 - API Queries
+
+Collection Location: [PostManColection Folder](https://github.com/sirzuks/webAssess/tree/master/PostManCollection)
+
+_  Public API - https://dog.ceo/dog-api/
+
+  Using the above mentioned API perform the following calls.
+
+  Perform an API request to produce a list of all dog breeds. Using code, verify “retriever” breed is within the list. - [GET listBreeds]
+
+  Perform an API request to produce a list of sub-breeds for “retriever”. - [produceAListOfSub-breedsFor“retriever”]
+
+  Perform an API request to produce a random image / link for the sub-breed “golden”. [produceARandomImageForTheSub-breed“golden”]_
+    
+**To use and Test this collection, import into Postman (preferrably the latest version but will work with V2 and upwards)**
+
+# Task 2 - Web Automation
 
 Create test cases for web link : [Way2Automation](http://www.way2automation.com/angularjs-protractor/webtables/)
 
