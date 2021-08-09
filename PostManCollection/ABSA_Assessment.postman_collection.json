@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "a90b8b15-7a6f-4dad-a387-cc775e46e3bb",
+		"name": "ABSA_Assessment",
+		"description": "Public API - https://dog.ceo/dog-api/\n\nUsing the above mentioned API perform the following calls.\n\nPerform an API request to produce a list of all dog breeds. Using code, verify “retriever” breed is within the list. - _[GET listBreeds]_\n\nPerform an API request to produce a list of sub-breeds for “retriever”. - _[produceAListOfSub-breedsFor“retriever”]_\n\nPerform an API request to produce a random image / link for the sub-breed “golden”. _[produceARandomImageForTheSub-breed“golden”]_",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listBreeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//  check for 200 response ok (PASS)",
+							"pm.test(\"Status code is 200\", () => {",
+							"  pm.expect(pm.response.code).to.eql(200);",
+							"});",
+							"",
+							"// check that 'retriever' is in the list",
+							"pm.test(\"Verify “retriever” is within the list\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"retriever\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/list/all",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"list",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "produceAListOfSub-breedsFor“retriever”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//  check for 200 response ok (PASS)",
+							"pm.test(\"Status code is 200\", () => {",
+							"  pm.expect(pm.response.code).to.eql(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/list",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"list"
+					]
+				},
+				"description": "view subset retriever"
+			},
+			"response": []
+		},
+		{
+			"name": "produceARandomImageForTheSub-breed“golden”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//  check for 200 response ok (PASS)",
+							"pm.test(\"Status code is 200\", () => {",
+							"  pm.expect(pm.response.code).to.eql(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/image/random",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"image",
+						"random"
+					]
+				},
+				"description": "view subset retriever"
+			},
+			"response": []
+		}
+	]
+}
